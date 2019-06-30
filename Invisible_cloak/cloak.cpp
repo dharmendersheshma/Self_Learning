@@ -36,7 +36,7 @@ int main(int argc, char** argv) {
 	// Converting image from BGR to HSV
 	cvtColor(frames, hsvimg, COLOR_BGR2HSV);
 
-    // Set data for mouse event
+        // Set data for mouse event
 	Mat im_temp = frames.clone();
 	userdata data;
 	data.im = im_temp;
@@ -51,13 +51,13 @@ int main(int argc, char** argv) {
 	waitKey(0);
 	
 	//defining the HSV values of the point selected
-    Vec3b HSV_Color = hsvimg.at<Vec3b>(data.points[0]);
+        Vec3b HSV_Color = hsvimg.at<Vec3b>(data.points[0]);
 	int hue = HSV_Color.val[0];
 	int saturation = HSV_Color.val[1];
 	int value = HSV_Color.val[2];
 	
 	// Create a VideoCapture object and open the input file for demonstrating the cloak working
-    // If the input is the web camera, pass 0 instead of the video file name
+        // If the input is the web camera, pass 0 instead of the video file name
 	// In first frame only background should be there, i.e., no person present
 	VideoCapture cap(0);
 
@@ -143,7 +143,7 @@ int main(int argc, char** argv) {
 		bitwise_not(mask1, mask2);
 		
 		Mat res1, res2, final_output;
-        // Segmenting the cloth out of the frame using bitwise and with the inverted mask
+                // Segmenting the cloth out of the frame using bitwise and with the inverted mask
 		bitwise_and(frame, frame, res1, mask2);
 
 		// creating image showing static background frame pixels only for the masked region
