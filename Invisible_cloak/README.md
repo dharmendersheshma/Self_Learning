@@ -1,12 +1,12 @@
 # Invisible Cloak(The augmented reality)
-***
+
 **Invisible Cloak** is the **image processing** project which tries to copy the invisibilty effect as shown in **Harry Potter** movies by Harry Potter himself.
 
 This **GitHub** repository contains the **C++** source code as well as an installable windows application.
 
 **Note:** The video camera must be stable as the background will be constant for the project.
 **Note:** By default the code is set to take live video input, which can be changed to other source. 
-***
+
 ## Description
 
 This project can be explained by dividing it into three parts:
